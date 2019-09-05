@@ -3,6 +3,8 @@
 all: release
 install: install-release
 
+APP_NAME = Squirrel
+
 # Change to `xcode/dist-with-icu` if boost is linked to icu libraries.
 RIME_DIST_TARGET = xcode/dist
 
@@ -101,7 +103,7 @@ sign-archive:
 	bash package/make_archive
 
 DSTROOT = /Library/Input Methods
-SQUIRREL_APP_ROOT = $(DSTROOT)/Squirrel.app
+SQUIRREL_APP_ROOT = $(DSTROOT)/$(APP_NAME).app
 
 .PHONY: permission-check install-debug install-release
 
@@ -110,13 +112,13 @@ permission-check:
 
 install-debug: debug permission-check
 	rm -rf "$(SQUIRREL_APP_ROOT)"
-	cp -R build/Debug/Squirrel.app "$(DSTROOT)"
-	DSTROOT="$(DSTROOT)" RIME_NO_PREBUILD=1 bash scripts/postinstall
+	cp -R "build/Debug/$(APP_NAME).app" "$(DSTROOT)"
+	DSTROOT="$(DSTROOT)" APP_NAME="$(APP_NAME)" RIME_NO_PREBUILD=1 bash scripts/postinstall
 
 install-release: release permission-check
 	rm -rf "$(SQUIRREL_APP_ROOT)"
-	cp -R build/Release/Squirrel.app "$(DSTROOT)"
-	DSTROOT="$(DSTROOT)" bash scripts/postinstall
+	cp -R "build/Release/$(APP_NAME).app" "$(DSTROOT)"
+	DSTROOT="$(DSTROOT)" APP_NAME="$(APP_NAME)" bash scripts/postinstall
 
 .PHONY: clean clean-deps
 

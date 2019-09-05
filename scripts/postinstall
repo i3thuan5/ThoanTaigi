@@ -1,8 +1,8 @@
 #!/bin/bash
 
 login_user=`/usr/bin/stat -f%Su /dev/console`
-squirrel_app_root="${DSTROOT}/Squirrel.app"
-squirrel_executable="${squirrel_app_root}/Contents/MacOS/Squirrel"
+squirrel_app_root="${DSTROOT}/${APP_NAME}.app"
+squirrel_executable="${squirrel_app_root}/Contents/MacOS/${APP_NAME}"
 rime_package_installer="${squirrel_app_root}/Contents/MacOS/rime-install"
 rime_shared_data_path="${squirrel_app_root}/Contents/SharedSupport"
 
