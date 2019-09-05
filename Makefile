@@ -3,6 +3,7 @@
 all: release
 install: install-release
 
+PROJECT_NAME = Squirrel
 APP_NAME = Squirrel
 
 # Change to `xcode/dist-with-icu` if boost is linked to icu libraries.
@@ -83,12 +84,12 @@ copy-opencc-data:
 deps: librime data
 
 release: $(DEPS_CHECK)
-	bash package/add_data_files
-	xcodebuild -project Squirrel.xcodeproj -configuration Release build | grep -v setenv | tee build.log
+	PROJECT_NAME="$(PROJECT_NAME)" bash package/add_data_files
+	xcodebuild -project $(PROJECT_NAME).xcodeproj -configuration Release build | grep -v setenv | tee build.log
 
 debug: $(DEPS_CHECK)
-	bash package/add_data_files
-	xcodebuild -project Squirrel.xcodeproj -configuration Debug build | grep -v setenv | tee build.log
+	PROJECT_NAME="$(PROJECT_NAME)"bash package/add_data_files
+	xcodebuild -project $(PROJECT_NAME).xcodeproj -configuration Debug build | grep -v setenv | tee build.log
 
 .PHONY: package archive sign-archive
 
