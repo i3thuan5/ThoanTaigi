@@ -668,7 +668,7 @@
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/lib";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = im.rime.inputmethod.Squirrel.Rime;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.ithoan.inputmethod.ThoanTaigi;
 				PRODUCT_NAME = ThoanTaigi;
 				SDKROOT = macosx;
 			};
@@ -691,7 +691,7 @@
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/lib";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = im.rime.inputmethod.Squirrel.Rime;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.ithoan.inputmethod.ThoanTaigi;
 				PRODUCT_NAME = ThoanTaigi;
 				SDKROOT = macosx;
 			};
