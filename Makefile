@@ -3,8 +3,8 @@
 all: release
 install: install-release
 
-PROJECT_NAME = Squirrel
-APP_NAME = Squirrel
+PROJECT_NAME = ThoanTaigi
+APP_NAME = ThoanTaigi
 
 # Change to `xcode/dist-with-icu` if boost is linked to icu libraries.
 RIME_DIST_TARGET = xcode/dist
