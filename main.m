@@ -12,7 +12,7 @@ void DeactivateInputSource();
 
 // Each input method needs a unique connection name.
 // Note that periods and spaces are not allowed in the connection name.
-const NSString *kConnectionName = @"Squirrel_1_Connection";
+const NSString *kConnectionName = @"ThoanTaigi_1_Connection";
 
 int main(int argc, char *argv[]) {
   if (argc > 1 && !strcmp("--quit", argv[1])) {
@@ -77,13 +77,13 @@ int main(int argc, char *argv[]) {
       [NSApp.squirrelAppDelegate setupRime];
       [NSApp.squirrelAppDelegate startRimeWithFullCheck:NO];
       [NSApp.squirrelAppDelegate loadSettings];
-      NSLog(@"Squirrel reporting!");
+      NSLog(@"ThoanTaigi reporting!");
     }
 
     // finally run everything
     [[NSApplication sharedApplication] run];
 
-    NSLog(@"Squirrel is quitting...");
+    NSLog(@"ThoanTaigi is quitting...");
     rime_get_api()->finalize();
   }
   return 0;

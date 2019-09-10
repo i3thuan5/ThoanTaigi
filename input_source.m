@@ -1,11 +1,11 @@
 #import <Carbon/Carbon.h>
 
 static const unsigned char kInstallLocation[] =
-    "/Library/Input Methods/Squirrel.app";
+    "/Library/Input Methods/ThoanTaigi.app";
 static NSString *const kSourceID =
-    @"im.rime.inputmethod.Squirrel";
+    @"tw.ithoan.inputmethod.ThoanTaigi";
 static NSString *const kInputModeID =
-    @"im.rime.inputmethod.Squirrel.Rime";
+    @"tw.ithoan.inputmethod.ThoanTaigi.HanloPoj";
 
 void RegisterInputSource() {
   CFURLRef installedLocationURL = CFURLCreateFromFileSystemRepresentation(
@@ -18,6 +18,11 @@ void RegisterInputSource() {
 }
 
 void ActivateInputSource() {
+  NSString* sourceID1 = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleIdentifier"];
+  NSString* inputModeID1 = [[NSBundle mainBundle].infoDictionary valueForKey:@"TISInputSourceID"];
+  NSLog(@"sourceID1: %@", sourceID1);
+  NSLog(@"inputModeID1: %@", inputModeID1);
+  
   CFArrayRef sourceList = TISCreateInputSourceList(NULL, true);
   for (int i = 0; i < CFArrayGetCount(sourceList); ++i) {
     TISInputSourceRef inputSource = (TISInputSourceRef)(CFArrayGetValueAtIndex(
