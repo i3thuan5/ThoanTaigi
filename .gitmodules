@@ -5,3 +5,7 @@
 [submodule "plum"]
 	path = plum
 	url = https://github.com/rime/plum.git
+	
+[submodule "rime_taigi_poj_hanlo"]
+	path = rime_taigi_poj_hanlo
+	url = https://github.com/i3thuan5/rime_taigi_poj_hanlo.git
