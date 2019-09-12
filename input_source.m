@@ -17,12 +17,7 @@ void RegisterInputSource() {
   }
 }
 
-void ActivateInputSource() {
-  NSString* sourceID1 = [[NSBundle mainBundle].infoDictionary valueForKey:@"CFBundleIdentifier"];
-  NSString* inputModeID1 = [[NSBundle mainBundle].infoDictionary valueForKey:@"TISInputSourceID"];
-  NSLog(@"sourceID1: %@", sourceID1);
-  NSLog(@"inputModeID1: %@", inputModeID1);
-  
+void ActivateInputSource() {  
   CFArrayRef sourceList = TISCreateInputSourceList(NULL, true);
   for (int i = 0; i < CFArrayGetCount(sourceList); ++i) {
     TISInputSourceRef inputSource = (TISInputSourceRef)(CFArrayGetValueAtIndex(

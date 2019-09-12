@@ -1,2 +1,5 @@
 
 tw.ithoan.inputmethod.ThoanTaigi = "ThoanTaigi";
+
+CFBundleName = "ThoanTaigi";
+CFBundleDisplayName = "ThoanTaigi";
