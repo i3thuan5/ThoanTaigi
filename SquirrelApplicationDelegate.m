@@ -24,7 +24,7 @@ static NSString *const kRimeWikiURL = @"https://github.com/rime/home/wiki";
 
 -(IBAction)configure:(id)sender
 {
-  [[NSWorkspace sharedWorkspace] openFile:(@"~/Library/Rime").stringByStandardizingPath];
+  [[NSWorkspace sharedWorkspace] openFile:(@"~/Library/ThoanTaigi").stringByStandardizingPath];
 }
 
 -(IBAction)openWiki:(id)sender
@@ -108,7 +108,7 @@ void notification_handler(void* context_object, RimeSessionId session_id,
 
 -(void)setupRime
 {
-  NSString* userDataDir = (@"~/Library/Rime").stringByStandardizingPath;
+  NSString* userDataDir = (@"~/Library/ThoanTaigi").stringByStandardizingPath;
   NSFileManager* fileManager = [NSFileManager defaultManager];
   if (![fileManager fileExistsAtPath:userDataDir]) {
     if (![fileManager createDirectoryAtPath:userDataDir

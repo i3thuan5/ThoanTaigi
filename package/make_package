@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BUNDLE_IDENTIFIER='im.rime.inputmethod.Squirrel'
+BUNDLE_IDENTIFIER='tw.ithoan.inputmethod.ThoanTaigi'
 INSTALL_LOCATION='/Library/Input Methods'
 
 cd "$(dirname $0)"

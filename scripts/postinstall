@@ -14,4 +14,23 @@ if [ -z "${RIME_NO_PREBUILD}" ]; then
     popd > /dev/null
 fi
 
+copy_rime_taigi_poj_hanlo() {
+	SRC_LOCATION="../rime_taigi_poj_hanlo/taigi_pojhanlo_sujiphoat"
+	INSTALL_LOCATION="$HOME/Library/ThoanTaigi"
+
+	mkdir -p "$INSTALL_LOCATION"
+	
+	for f in ${SRC_LOCATION}/*.yaml
+	do
+		cp -v $f $INSTALL_LOCATION
+	done
+	
+	for f in ${SRC_LOCATION}/*.txt
+	do
+		cp -v $f $INSTALL_LOCATION
+	done
+}
+
+copy_rime_taigi_poj_hanlo
+
 /usr/bin/sudo -u "${login_user}" "${squirrel_executable}" --install
