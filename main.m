@@ -45,7 +45,7 @@ int main(int argc, char *argv[]) {
     show_message("deploy_update", "deploy");
     // build all schemas in current directory
     RIME_STRUCT(RimeTraits, builder_traits);
-    builder_traits.app_name = "rime.squirrel-builder";
+    builder_traits.app_name = "rime.thoantaigi-builder";
     rime_get_api()->setup(&builder_traits);
     rime_get_api()->deployer_initialize(NULL);
     return rime_get_api()->deploy() ? 0 : 1;
