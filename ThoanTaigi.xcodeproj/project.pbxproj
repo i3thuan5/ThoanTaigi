@@ -66,6 +66,8 @@
 		7B5488C11D2DACDF0056A1BE /* luna_quanpin.schema.yaml in Copy Shared Support Files */ = {isa = PBXBuildFile; fileRef = 7B5488331D2DAAD10056A1BE /* luna_quanpin.schema.yaml */; };
 		7B5488C91D2DACDF0056A1BE /* symbols.yaml in Copy Shared Support Files */ = {isa = PBXBuildFile; fileRef = 7B54883B1D2DAAD10056A1BE /* symbols.yaml */; };
 		7BDB21231C6EF1BE0025E351 /* SquirrelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDB21221C6EF1BE0025E351 /* SquirrelConfig.m */; };
+		870A4C1B234504B6006CB589 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870A4C1A234504B6006CB589 /* Sparkle.framework */; };
+		870A4C1C234504FB006CB589 /* Sparkle.framework in Copy 3rd-party Frameworks */ = {isa = PBXBuildFile; fileRef = 870A4C1A234504B6006CB589 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8789D9FF2328FC8200BC1440 /* ithoan_icon_16.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8789D9FD2328FC8200BC1440 /* ithoan_icon_16.icns */; };
 		8789DA012328FD6500BC1440 /* ithoan_icon_128.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8789DA002328FD6500BC1440 /* ithoan_icon_128.icns */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -163,6 +165,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				870A4C1C234504FB006CB589 /* Sparkle.framework in Copy 3rd-party Frameworks */,
 				44CD640C15E2646B0021234E /* librime.1.dylib in Copy 3rd-party Frameworks */,
 			);
 			name = "Copy 3rd-party Frameworks";
@@ -248,6 +251,7 @@
 		7B54888D1D2DAAF50056A1BE /* TWVariantsRevPhrases.ocd */ = {isa = PBXFileReference; lastKnownFileType = file; path = TWVariantsRevPhrases.ocd; sourceTree = "<group>"; };
 		7BDB21211C6EF1BE0025E351 /* SquirrelConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquirrelConfig.h; sourceTree = "<group>"; };
 		7BDB21221C6EF1BE0025E351 /* SquirrelConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquirrelConfig.m; sourceTree = "<group>"; };
+		870A4C1A234504B6006CB589 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		8789D9FD2328FC8200BC1440 /* ithoan_icon_16.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = ithoan_icon_16.icns; path = ithoan_icon/ithoan_icon_16.icns; sourceTree = "<group>"; };
 		8789DA002328FD6500BC1440 /* ithoan_icon_128.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = ithoan_icon_128.icns; path = ithoan_icon/ithoan_icon_128.icns; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -267,6 +271,7 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				E93074B70A5C264700470842 /* InputMethodKit.framework in Frameworks */,
 				A4B8E1B30F645B870094E08B /* Carbon.framework in Frameworks */,
+				870A4C1B234504B6006CB589 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +363,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				870A4C1A234504B6006CB589 /* Sparkle.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
@@ -582,7 +588,8 @@
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)\"";
@@ -620,7 +627,8 @@
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)\"";
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2 = "\"$(SRCROOT)\"";
