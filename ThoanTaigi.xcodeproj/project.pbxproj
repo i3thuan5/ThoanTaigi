@@ -68,6 +68,14 @@
 		7BDB21231C6EF1BE0025E351 /* SquirrelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDB21221C6EF1BE0025E351 /* SquirrelConfig.m */; };
 		870A4C1B234504B6006CB589 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870A4C1A234504B6006CB589 /* Sparkle.framework */; };
 		870A4C1C234504FB006CB589 /* Sparkle.framework in Copy 3rd-party Frameworks */ = {isa = PBXBuildFile; fileRef = 870A4C1A234504B6006CB589 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		876E98C02346077B00E5164A /* default.custom.yaml in Copy taigi_pojhanlo_sujiphoat  Files */ = {isa = PBXBuildFile; fileRef = 876E98A42346066300E5164A /* default.custom.yaml */; };
+		876E98C12346077B00E5164A /* default.yaml in Copy taigi_pojhanlo_sujiphoat  Files */ = {isa = PBXBuildFile; fileRef = 876E98AA2346066300E5164A /* default.yaml */; };
+		876E98C22346077B00E5164A /* squirrel.custom.yaml in Copy taigi_pojhanlo_sujiphoat  Files */ = {isa = PBXBuildFile; fileRef = 876E98A22346066300E5164A /* squirrel.custom.yaml */; };
+		876E98C32346077B00E5164A /* taigi_pojhanlo.custom_phrase.txt in Copy taigi_pojhanlo_sujiphoat  Files */ = {isa = PBXBuildFile; fileRef = 876E98A02346066300E5164A /* taigi_pojhanlo.custom_phrase.txt */; };
+		876E98C42346077B00E5164A /* taigi_pojhanlo.dict.yaml in Copy taigi_pojhanlo_sujiphoat  Files */ = {isa = PBXBuildFile; fileRef = 876E98A92346066300E5164A /* taigi_pojhanlo.dict.yaml */; };
+		876E98C52346077B00E5164A /* taigi_pojhanlo.extended.dict.yaml in Copy taigi_pojhanlo_sujiphoat  Files */ = {isa = PBXBuildFile; fileRef = 876E98A82346066300E5164A /* taigi_pojhanlo.extended.dict.yaml */; };
+		876E98C62346077B00E5164A /* taigi_pojhanlo.schema.yaml in Copy taigi_pojhanlo_sujiphoat  Files */ = {isa = PBXBuildFile; fileRef = 876E98A52346066300E5164A /* taigi_pojhanlo.schema.yaml */; };
+		876E98C72346077B00E5164A /* taigi_pojhanlo.symbol.yaml in Copy taigi_pojhanlo_sujiphoat  Files */ = {isa = PBXBuildFile; fileRef = 876E98A12346066300E5164A /* taigi_pojhanlo.symbol.yaml */; };
 		8789D9FF2328FC8200BC1440 /* ithoan_icon_16.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8789D9FD2328FC8200BC1440 /* ithoan_icon_16.icns */; };
 		8789DA012328FD6500BC1440 /* ithoan_icon_128.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8789DA002328FD6500BC1440 /* ithoan_icon_128.icns */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -157,6 +165,24 @@
 				44E21A9016A653E700C2B08F /* rime_deployer in CopyFiles */,
 				44E21A9116A653E700C2B08F /* rime_dict_manager in CopyFiles */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		876E98BF2346074E00E5164A /* Copy taigi_pojhanlo_sujiphoat  Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = taigi_pojhanlo_sujiphoat;
+			dstSubfolderSpec = 12;
+			files = (
+				876E98C02346077B00E5164A /* default.custom.yaml in Copy taigi_pojhanlo_sujiphoat  Files */,
+				876E98C12346077B00E5164A /* default.yaml in Copy taigi_pojhanlo_sujiphoat  Files */,
+				876E98C22346077B00E5164A /* squirrel.custom.yaml in Copy taigi_pojhanlo_sujiphoat  Files */,
+				876E98C32346077B00E5164A /* taigi_pojhanlo.custom_phrase.txt in Copy taigi_pojhanlo_sujiphoat  Files */,
+				876E98C42346077B00E5164A /* taigi_pojhanlo.dict.yaml in Copy taigi_pojhanlo_sujiphoat  Files */,
+				876E98C52346077B00E5164A /* taigi_pojhanlo.extended.dict.yaml in Copy taigi_pojhanlo_sujiphoat  Files */,
+				876E98C62346077B00E5164A /* taigi_pojhanlo.schema.yaml in Copy taigi_pojhanlo_sujiphoat  Files */,
+				876E98C72346077B00E5164A /* taigi_pojhanlo.symbol.yaml in Copy taigi_pojhanlo_sujiphoat  Files */,
+			);
+			name = "Copy taigi_pojhanlo_sujiphoat  Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A464E3780F65263000148227 /* Copy 3rd-party Frameworks */ = {
@@ -252,6 +278,14 @@
 		7BDB21211C6EF1BE0025E351 /* SquirrelConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquirrelConfig.h; sourceTree = "<group>"; };
 		7BDB21221C6EF1BE0025E351 /* SquirrelConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquirrelConfig.m; sourceTree = "<group>"; };
 		870A4C1A234504B6006CB589 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		876E98A02346066300E5164A /* taigi_pojhanlo.custom_phrase.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = taigi_pojhanlo.custom_phrase.txt; sourceTree = "<group>"; };
+		876E98A12346066300E5164A /* taigi_pojhanlo.symbol.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = taigi_pojhanlo.symbol.yaml; sourceTree = "<group>"; };
+		876E98A22346066300E5164A /* squirrel.custom.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = squirrel.custom.yaml; sourceTree = "<group>"; };
+		876E98A42346066300E5164A /* default.custom.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = default.custom.yaml; sourceTree = "<group>"; };
+		876E98A52346066300E5164A /* taigi_pojhanlo.schema.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = taigi_pojhanlo.schema.yaml; sourceTree = "<group>"; };
+		876E98A82346066300E5164A /* taigi_pojhanlo.extended.dict.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = taigi_pojhanlo.extended.dict.yaml; sourceTree = "<group>"; };
+		876E98A92346066300E5164A /* taigi_pojhanlo.dict.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = taigi_pojhanlo.dict.yaml; sourceTree = "<group>"; };
+		876E98AA2346066300E5164A /* default.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = default.yaml; sourceTree = "<group>"; };
 		8789D9FD2328FC8200BC1440 /* ithoan_icon_16.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = ithoan_icon_16.icns; path = ithoan_icon/ithoan_icon_16.icns; sourceTree = "<group>"; };
 		8789DA002328FD6500BC1440 /* ithoan_icon_128.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = ithoan_icon_128.icns; path = ithoan_icon/ithoan_icon_128.icns; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -415,9 +449,10 @@
 		44DA7A4214DD598900C1ED3B /* SharedSupport */ = {
 			isa = PBXGroup;
 			children = (
-				442B5B871570C37200370DEA /* squirrel.yaml */,
-				7B5488A71D2DAC9D0056A1BE /* plum */,
 				4407F39D14EC071E001329FE /* opencc */,
+				7B5488A71D2DAC9D0056A1BE /* plum */,
+				442B5B871570C37200370DEA /* squirrel.yaml */,
+				876E989E2346066300E5164A /* taigi_pojhanlo_sujiphoat */,
 			);
 			name = SharedSupport;
 			sourceTree = "<group>";
@@ -460,6 +495,22 @@
 			name = plum;
 			sourceTree = "<group>";
 		};
+		876E989E2346066300E5164A /* taigi_pojhanlo_sujiphoat */ = {
+			isa = PBXGroup;
+			children = (
+				876E98A42346066300E5164A /* default.custom.yaml */,
+				876E98AA2346066300E5164A /* default.yaml */,
+				876E98A22346066300E5164A /* squirrel.custom.yaml */,
+				876E98A02346066300E5164A /* taigi_pojhanlo.custom_phrase.txt */,
+				876E98A92346066300E5164A /* taigi_pojhanlo.dict.yaml */,
+				876E98A82346066300E5164A /* taigi_pojhanlo.extended.dict.yaml */,
+				876E98A52346066300E5164A /* taigi_pojhanlo.schema.yaml */,
+				876E98A12346066300E5164A /* taigi_pojhanlo.symbol.yaml */,
+			);
+			name = taigi_pojhanlo_sujiphoat;
+			path = rime_taigi_poj_hanlo/taigi_pojhanlo_sujiphoat;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -474,6 +525,7 @@
 				44DA7A1614DD581B00C1ED3B /* Copy Shared Support Files */,
 				4407F3CA14EC079A001329FE /* Copy opencc Files */,
 				44E21A8D16A653AC00C2B08F /* CopyFiles */,
+				876E98BF2346074E00E5164A /* Copy taigi_pojhanlo_sujiphoat  Files */,
 			);
 			buildRules = (
 			);
