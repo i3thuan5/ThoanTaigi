@@ -18,7 +18,7 @@
 		441E637F22B7E96F006DCCDD /* terra_pinyin.dict.yaml in Copy Shared Support Files */ = {isa = PBXBuildFile; fileRef = 441E636422B7E90C006DCCDD /* terra_pinyin.dict.yaml */; };
 		441E638022B7E96F006DCCDD /* terra_pinyin.schema.yaml in Copy Shared Support Files */ = {isa = PBXBuildFile; fileRef = 441E636522B7E90C006DCCDD /* terra_pinyin.schema.yaml */; };
 		442B5B881570C37200370DEA /* squirrel.yaml in Copy Shared Support Files */ = {isa = PBXBuildFile; fileRef = 442B5B871570C37200370DEA /* squirrel.yaml */; };
-		442C64921F7A410A0027EFBE /* rime-install in CopyFiles */ = {isa = PBXBuildFile; fileRef = 442C64901F7A404A0027EFBE /* rime-install */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		442C64921F7A410A0027EFBE /* rime-install in Copy Files */ = {isa = PBXBuildFile; fileRef = 442C64901F7A404A0027EFBE /* rime-install */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4443A83A1828CC5100731305 /* input_source.m in Sources */ = {isa = PBXBuildFile; fileRef = 4443A8391828CC5100731305 /* input_source.m */; };
 		44986A95184B421700B3278D /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44986A93184B421700B3278D /* LICENSE.txt */; };
 		44986A96184B421700B3278D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 44986A94184B421700B3278D /* README.md */; };
@@ -27,8 +27,8 @@
 		44AEBC7521F569FD00344375 /* key_bindings.yaml in Copy Shared Support Files */ = {isa = PBXBuildFile; fileRef = 44AEBC7221F569CF00344375 /* key_bindings.yaml */; };
 		44AEBC7621F569FD00344375 /* punctuation.yaml in Copy Shared Support Files */ = {isa = PBXBuildFile; fileRef = 44AEBC7121F569CF00344375 /* punctuation.yaml */; };
 		44CD640C15E2646B0021234E /* librime.1.dylib in Copy 3rd-party Frameworks */ = {isa = PBXBuildFile; fileRef = 44CD640915E2633D0021234E /* librime.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		44E21A9016A653E700C2B08F /* rime_deployer in CopyFiles */ = {isa = PBXBuildFile; fileRef = 44E21A8E16A653E700C2B08F /* rime_deployer */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		44E21A9116A653E700C2B08F /* rime_dict_manager in CopyFiles */ = {isa = PBXBuildFile; fileRef = 44E21A8F16A653E700C2B08F /* rime_dict_manager */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		44E21A9016A653E700C2B08F /* rime_deployer in Copy Files */ = {isa = PBXBuildFile; fileRef = 44E21A8E16A653E700C2B08F /* rime_deployer */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		44E21A9116A653E700C2B08F /* rime_dict_manager in Copy Files */ = {isa = PBXBuildFile; fileRef = 44E21A8F16A653E700C2B08F /* rime_dict_manager */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		44E98EC314AE1AC900847AD6 /* utf8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44E98EC214AE1AC900847AD6 /* utf8.cpp */; };
 		44F01493152AF6AF00EFDAC3 /* Sparkle.framework in Copy 3rd-party Frameworks */ = {isa = PBXBuildFile; fileRef = 44F01492152AF6AF00EFDAC3 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		44F01538152B2D9300EFDAC3 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F01492152AF6AF00EFDAC3 /* Sparkle.framework */; };
@@ -68,6 +68,14 @@
 		7B5488C11D2DACDF0056A1BE /* luna_quanpin.schema.yaml in Copy Shared Support Files */ = {isa = PBXBuildFile; fileRef = 7B5488331D2DAAD10056A1BE /* luna_quanpin.schema.yaml */; };
 		7B5488C91D2DACDF0056A1BE /* symbols.yaml in Copy Shared Support Files */ = {isa = PBXBuildFile; fileRef = 7B54883B1D2DAAD10056A1BE /* symbols.yaml */; };
 		7BDB21231C6EF1BE0025E351 /* SquirrelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDB21221C6EF1BE0025E351 /* SquirrelConfig.m */; };
+		8749877A2373141E00880B20 /* default.custom.yaml in Copy taigi_pojhanlo_sujiphoat Files */ = {isa = PBXBuildFile; fileRef = 874987672372CB0C00880B20 /* default.custom.yaml */; };
+		8749877B2373141E00880B20 /* default.yaml in Copy taigi_pojhanlo_sujiphoat Files */ = {isa = PBXBuildFile; fileRef = 8749876D2372CB0C00880B20 /* default.yaml */; };
+		8749877C2373141E00880B20 /* squirrel.custom.yaml in Copy taigi_pojhanlo_sujiphoat Files */ = {isa = PBXBuildFile; fileRef = 874987652372CB0C00880B20 /* squirrel.custom.yaml */; };
+		8749877D2373141E00880B20 /* taigi_pojhanlo.custom_phrase.txt in Copy taigi_pojhanlo_sujiphoat Files */ = {isa = PBXBuildFile; fileRef = 874987632372CB0C00880B20 /* taigi_pojhanlo.custom_phrase.txt */; };
+		8749877E2373141E00880B20 /* taigi_pojhanlo.dict.yaml in Copy taigi_pojhanlo_sujiphoat Files */ = {isa = PBXBuildFile; fileRef = 8749876C2372CB0C00880B20 /* taigi_pojhanlo.dict.yaml */; };
+		8749877F2373141E00880B20 /* taigi_pojhanlo.extended.dict.yaml in Copy taigi_pojhanlo_sujiphoat Files */ = {isa = PBXBuildFile; fileRef = 8749876B2372CB0C00880B20 /* taigi_pojhanlo.extended.dict.yaml */; };
+		874987802373141E00880B20 /* taigi_pojhanlo.schema.yaml in Copy taigi_pojhanlo_sujiphoat Files */ = {isa = PBXBuildFile; fileRef = 874987682372CB0C00880B20 /* taigi_pojhanlo.schema.yaml */; };
+		874987812373141E00880B20 /* taigi_pojhanlo.symbol.yaml in Copy taigi_pojhanlo_sujiphoat Files */ = {isa = PBXBuildFile; fileRef = 874987642372CB0C00880B20 /* taigi_pojhanlo.symbol.yaml */; };
 		8789D9FF2328FC8200BC1440 /* ithoan_icon_16.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8789D9FD2328FC8200BC1440 /* ithoan_icon_16.icns */; };
 		8789DA012328FD6500BC1440 /* ithoan_icon_128.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8789DA002328FD6500BC1440 /* ithoan_icon_128.icns */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -147,16 +155,35 @@
 			name = "Copy Shared Support Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		44E21A8D16A653AC00C2B08F /* CopyFiles */ = {
+		44E21A8D16A653AC00C2B08F /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				442C64921F7A410A0027EFBE /* rime-install in CopyFiles */,
-				44E21A9016A653E700C2B08F /* rime_deployer in CopyFiles */,
-				44E21A9116A653E700C2B08F /* rime_dict_manager in CopyFiles */,
+				442C64921F7A410A0027EFBE /* rime-install in Copy Files */,
+				44E21A9016A653E700C2B08F /* rime_deployer in Copy Files */,
+				44E21A9116A653E700C2B08F /* rime_dict_manager in Copy Files */,
 			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		874987602372CADB00880B20 /* Copy taigi_pojhanlo_sujiphoat Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = taigi_pojhanlo_sujiphoat;
+			dstSubfolderSpec = 12;
+			files = (
+				8749877A2373141E00880B20 /* default.custom.yaml in Copy taigi_pojhanlo_sujiphoat Files */,
+				8749877B2373141E00880B20 /* default.yaml in Copy taigi_pojhanlo_sujiphoat Files */,
+				8749877C2373141E00880B20 /* squirrel.custom.yaml in Copy taigi_pojhanlo_sujiphoat Files */,
+				8749877D2373141E00880B20 /* taigi_pojhanlo.custom_phrase.txt in Copy taigi_pojhanlo_sujiphoat Files */,
+				8749877E2373141E00880B20 /* taigi_pojhanlo.dict.yaml in Copy taigi_pojhanlo_sujiphoat Files */,
+				8749877F2373141E00880B20 /* taigi_pojhanlo.extended.dict.yaml in Copy taigi_pojhanlo_sujiphoat Files */,
+				874987802373141E00880B20 /* taigi_pojhanlo.schema.yaml in Copy taigi_pojhanlo_sujiphoat Files */,
+				874987812373141E00880B20 /* taigi_pojhanlo.symbol.yaml in Copy taigi_pojhanlo_sujiphoat Files */,
+			);
+			name = "Copy taigi_pojhanlo_sujiphoat Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A464E3780F65263000148227 /* Copy 3rd-party Frameworks */ = {
@@ -252,6 +279,14 @@
 		7B54888D1D2DAAF50056A1BE /* TWVariantsRevPhrases.ocd */ = {isa = PBXFileReference; lastKnownFileType = file; path = TWVariantsRevPhrases.ocd; sourceTree = "<group>"; };
 		7BDB21211C6EF1BE0025E351 /* SquirrelConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquirrelConfig.h; sourceTree = "<group>"; };
 		7BDB21221C6EF1BE0025E351 /* SquirrelConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquirrelConfig.m; sourceTree = "<group>"; };
+		874987632372CB0C00880B20 /* taigi_pojhanlo.custom_phrase.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = taigi_pojhanlo.custom_phrase.txt; sourceTree = "<group>"; };
+		874987642372CB0C00880B20 /* taigi_pojhanlo.symbol.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = taigi_pojhanlo.symbol.yaml; sourceTree = "<group>"; };
+		874987652372CB0C00880B20 /* squirrel.custom.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = squirrel.custom.yaml; sourceTree = "<group>"; };
+		874987672372CB0C00880B20 /* default.custom.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = default.custom.yaml; sourceTree = "<group>"; };
+		874987682372CB0C00880B20 /* taigi_pojhanlo.schema.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = taigi_pojhanlo.schema.yaml; sourceTree = "<group>"; };
+		8749876B2372CB0C00880B20 /* taigi_pojhanlo.extended.dict.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = taigi_pojhanlo.extended.dict.yaml; sourceTree = "<group>"; };
+		8749876C2372CB0C00880B20 /* taigi_pojhanlo.dict.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = taigi_pojhanlo.dict.yaml; sourceTree = "<group>"; };
+		8749876D2372CB0C00880B20 /* default.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = default.yaml; sourceTree = "<group>"; };
 		8789D9FD2328FC8200BC1440 /* ithoan_icon_16.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = ithoan_icon_16.icns; path = ithoan_icon/ithoan_icon_16.icns; sourceTree = "<group>"; };
 		8789DA002328FD6500BC1440 /* ithoan_icon_128.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = ithoan_icon_128.icns; path = ithoan_icon/ithoan_icon_128.icns; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -415,6 +450,7 @@
 		44DA7A4214DD598900C1ED3B /* SharedSupport */ = {
 			isa = PBXGroup;
 			children = (
+				874987612372CB0C00880B20 /* taigi_pojhanlo_sujiphoat */,
 				442B5B871570C37200370DEA /* squirrel.yaml */,
 				7B5488A71D2DAC9D0056A1BE /* plum */,
 				4407F39D14EC071E001329FE /* opencc */,
@@ -460,6 +496,22 @@
 			name = plum;
 			sourceTree = "<group>";
 		};
+		874987612372CB0C00880B20 /* taigi_pojhanlo_sujiphoat */ = {
+			isa = PBXGroup;
+			children = (
+				874987672372CB0C00880B20 /* default.custom.yaml */,
+				8749876D2372CB0C00880B20 /* default.yaml */,
+				874987652372CB0C00880B20 /* squirrel.custom.yaml */,
+				874987632372CB0C00880B20 /* taigi_pojhanlo.custom_phrase.txt */,
+				8749876C2372CB0C00880B20 /* taigi_pojhanlo.dict.yaml */,
+				8749876B2372CB0C00880B20 /* taigi_pojhanlo.extended.dict.yaml */,
+				874987682372CB0C00880B20 /* taigi_pojhanlo.schema.yaml */,
+				874987642372CB0C00880B20 /* taigi_pojhanlo.symbol.yaml */,
+			);
+			name = taigi_pojhanlo_sujiphoat;
+			path = rime_taigi_poj_hanlo/taigi_pojhanlo_sujiphoat;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -473,7 +525,8 @@
 				A464E3780F65263000148227 /* Copy 3rd-party Frameworks */,
 				44DA7A1614DD581B00C1ED3B /* Copy Shared Support Files */,
 				4407F3CA14EC079A001329FE /* Copy opencc Files */,
-				44E21A8D16A653AC00C2B08F /* CopyFiles */,
+				44E21A8D16A653AC00C2B08F /* Copy Files */,
+				874987602372CADB00880B20 /* Copy taigi_pojhanlo_sujiphoat Files */,
 			);
 			buildRules = (
 			);
@@ -584,6 +637,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -601,6 +655,8 @@
 					"$(inherited)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
+				MARKETING_VERSION = 0.1.0;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DLEOPARD",
 					"-DHAVE_CONFIG_H",
@@ -621,6 +677,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -637,6 +694,8 @@
 					"$(inherited)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
+				MARKETING_VERSION = 0.1.0;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-DLEOPARD",
 					"-DHAVE_CONFIG_H",
