@@ -114,12 +114,12 @@ permission-check:
 install-debug: debug permission-check
 	rm -rf "$(SQUIRREL_APP_ROOT)"
 	cp -R "build/Debug/$(APP_NAME).app" "$(DSTROOT)"
-	RIME_NO_PREBUILD=1 bash scripts/postinstall
+	DSTROOT="$(DSTROOT)" APP_NAME="$(APP_NAME)" RIME_NO_PREBUILD=1 bash scripts/postinstall
 
 install-release: release permission-check
 	rm -rf "$(SQUIRREL_APP_ROOT)"
 	cp -R "build/Release/$(APP_NAME).app" "$(DSTROOT)"
-	bash scripts/postinstall
+	DSTROOT="$(DSTROOT)" APP_NAME="$(APP_NAME)" bash scripts/postinstall
 
 .PHONY: clean clean-deps
 

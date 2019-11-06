@@ -15,4 +15,3 @@ package/test-*
 *~
 .*.swp
 .DS_Store
-Release/*

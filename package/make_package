@@ -7,17 +7,16 @@ cd "$(dirname $0)"
 PROJECT_ROOT=$(cd ..; pwd)
 
 get_app_version() {
-    sed -n '/CFBundleShortVersionString/{n;s/.*<string>\(.*\)<\/string>.*/\1/;p;}' $@
+    sed -n '/CFBundleVersion/{n;s/.*<string>\(.*\)<\/string>.*/\1/;p;}' $@
 }
 
-APP_VERSION=$(get_app_version "${PROJECT_ROOT}/Info.plist")
-
-#     --info PackageInfo \
 pkgbuild \
+	--info PackageInfo \
     --root "${PROJECT_ROOT}/build/Release" \
     --component-plist Squirrel-component.plist \
     --identifier "${BUNDLE_IDENTIFIER}" \
-    --version ${APP_VERSION} \
+    --version $(get_app_version "${PROJECT_ROOT}/Info.plist") \
     --install-location "${INSTALL_LOCATION}" \
     --scripts "${PROJECT_ROOT}/scripts" \
-    ../Release/ThoanTaigi_v${APP_VERSION}.pkg
+    ThoanTaigi.pkg
+    

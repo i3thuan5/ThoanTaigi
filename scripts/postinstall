@@ -23,7 +23,7 @@ copy_rime_taigi_poj_hanlo() {
 	SRC_LOCATION="${rime_shared_data_path}/taigi_pojhanlo_sujiphoat"
 	INSTALL_LOCATION="$HOME/Library/ThoanTaigi"
 
-	mkdir -p "$INSTALL_LOCATION"
+	/usr/bin/sudo -u "${login_user}" mkdir -p "$INSTALL_LOCATION"
 	
 	cp -v "${SRC_LOCATION}/default.yaml" "$INSTALL_LOCATION"
     cp -v "${SRC_LOCATION}/default.custom.yaml" "$INSTALL_LOCATION"
@@ -35,7 +35,6 @@ copy_rime_taigi_poj_hanlo() {
 	cp -v -n "${SRC_LOCATION}/taigi_pojhanlo.custom_phrase.txt" "$INSTALL_LOCATION"
     cp -v -n "${SRC_LOCATION}/taigi_pojhanlo.extended.dict.yaml" "$INSTALL_LOCATION"
 }
-
 copy_rime_taigi_poj_hanlo
 
 exit 0
