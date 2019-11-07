@@ -3,6 +3,9 @@
 all: release
 install: install-release
 
+PROJECT_NAME = ThoanTaigi
+APP_NAME = ThoanTaigi
+
 # Change to `xcode/dist-with-icu` if boost is linked to icu libraries.
 RIME_DIST_TARGET = xcode/dist
 
@@ -81,12 +84,12 @@ copy-opencc-data:
 deps: librime data
 
 release: $(DEPS_CHECK)
-	bash package/add_data_files
-	xcodebuild -project Squirrel.xcodeproj -configuration Release build | grep -v setenv | tee build.log
+	PROJECT_NAME="$(PROJECT_NAME)" bash package/add_data_files
+	xcodebuild -project $(PROJECT_NAME).xcodeproj -configuration Release build | grep -v setenv | tee build.log
 
 debug: $(DEPS_CHECK)
-	bash package/add_data_files
-	xcodebuild -project Squirrel.xcodeproj -configuration Debug build | grep -v setenv | tee build.log
+	PROJECT_NAME="$(PROJECT_NAME)"bash package/add_data_files
+	xcodebuild -project $(PROJECT_NAME).xcodeproj -configuration Debug build | grep -v setenv | tee build.log
 
 .PHONY: package archive sign-archive
 
@@ -101,7 +104,7 @@ sign-archive:
 	bash package/make_archive
 
 DSTROOT = /Library/Input Methods
-SQUIRREL_APP_ROOT = $(DSTROOT)/Squirrel.app
+SQUIRREL_APP_ROOT = $(DSTROOT)/$(APP_NAME).app
 
 .PHONY: permission-check install-debug install-release
 
@@ -110,13 +113,13 @@ permission-check:
 
 install-debug: debug permission-check
 	rm -rf "$(SQUIRREL_APP_ROOT)"
-	cp -R build/Debug/Squirrel.app "$(DSTROOT)"
-	DSTROOT="$(DSTROOT)" RIME_NO_PREBUILD=1 bash scripts/postinstall
+	cp -R "build/Debug/$(APP_NAME).app" "$(DSTROOT)"
+	DSTROOT="$(DSTROOT)" APP_NAME="$(APP_NAME)" RIME_NO_PREBUILD=1 bash scripts/postinstall
 
 install-release: release permission-check
 	rm -rf "$(SQUIRREL_APP_ROOT)"
-	cp -R build/Release/Squirrel.app "$(DSTROOT)"
-	DSTROOT="$(DSTROOT)" bash scripts/postinstall
+	cp -R "build/Release/$(APP_NAME).app" "$(DSTROOT)"
+	DSTROOT="$(DSTROOT)" APP_NAME="$(APP_NAME)" bash scripts/postinstall
 
 .PHONY: clean clean-deps
 

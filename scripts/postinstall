@@ -1,8 +1,11 @@
 #!/bin/bash
 
+DSTROOT="/Library/Input Methods"
+APP_NAME="ThoanTaigi"
+
 login_user=`/usr/bin/stat -f%Su /dev/console`
-squirrel_app_root="${DSTROOT}/Squirrel.app"
-squirrel_executable="${squirrel_app_root}/Contents/MacOS/Squirrel"
+squirrel_app_root="${DSTROOT}/${APP_NAME}.app"
+squirrel_executable="${squirrel_app_root}/Contents/MacOS/${APP_NAME}"
 rime_package_installer="${squirrel_app_root}/Contents/MacOS/rime-install"
 rime_shared_data_path="${squirrel_app_root}/Contents/SharedSupport"
 
@@ -15,3 +18,23 @@ if [ -z "${RIME_NO_PREBUILD}" ]; then
 fi
 
 /usr/bin/sudo -u "${login_user}" "${squirrel_executable}" --install
+
+copy_rime_taigi_poj_hanlo() {
+	SRC_LOCATION="${rime_shared_data_path}/taigi_pojhanlo_sujiphoat"
+	INSTALL_LOCATION="$HOME/Library/ThoanTaigi"
+
+	/usr/bin/sudo -u "${login_user}" mkdir -p "$INSTALL_LOCATION"
+	
+	cp -v "${SRC_LOCATION}/default.yaml" "$INSTALL_LOCATION"
+    cp -v "${SRC_LOCATION}/default.custom.yaml" "$INSTALL_LOCATION"
+    cp -v "${SRC_LOCATION}/squirrel.custom.yaml" "$INSTALL_LOCATION"
+    cp -v "${SRC_LOCATION}/taigi_pojhanlo.dict.yaml" "$INSTALL_LOCATION"
+    cp -v "${SRC_LOCATION}/taigi_pojhanlo.schema.yaml" "$INSTALL_LOCATION"
+    cp -v "${SRC_LOCATION}/taigi_pojhanlo.symbol.yaml" "$INSTALL_LOCATION"
+    
+	cp -v -n "${SRC_LOCATION}/taigi_pojhanlo.custom_phrase.txt" "$INSTALL_LOCATION"
+    cp -v -n "${SRC_LOCATION}/taigi_pojhanlo.extended.dict.yaml" "$INSTALL_LOCATION"
+}
+copy_rime_taigi_poj_hanlo
+
+exit 0

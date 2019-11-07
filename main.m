@@ -12,7 +12,7 @@ void DeactivateInputSource();
 
 // Each input method needs a unique connection name.
 // Note that periods and spaces are not allowed in the connection name.
-const NSString *kConnectionName = @"Squirrel_1_Connection";
+const NSString *kConnectionName = @"ThoanTaigi_1_Connection";
 
 int main(int argc, char *argv[]) {
   if (argc > 1 && !strcmp("--quit", argv[1])) {
@@ -45,7 +45,7 @@ int main(int argc, char *argv[]) {
     show_message("deploy_update", "deploy");
     // build all schemas in current directory
     RIME_STRUCT(RimeTraits, builder_traits);
-    builder_traits.app_name = "rime.squirrel-builder";
+    builder_traits.app_name = "rime.thoantaigi-builder";
     rime_get_api()->setup(&builder_traits);
     rime_get_api()->deployer_initialize(NULL);
     return rime_get_api()->deploy() ? 0 : 1;
@@ -77,13 +77,13 @@ int main(int argc, char *argv[]) {
       [NSApp.squirrelAppDelegate setupRime];
       [NSApp.squirrelAppDelegate startRimeWithFullCheck:NO];
       [NSApp.squirrelAppDelegate loadSettings];
-      NSLog(@"Squirrel reporting!");
+      NSLog(@"ThoanTaigi reporting!");
     }
 
     // finally run everything
     [[NSApplication sharedApplication] run];
 
-    NSLog(@"Squirrel is quitting...");
+    NSLog(@"ThoanTaigi is quitting...");
     rime_get_api()->finalize();
   }
   return 0;

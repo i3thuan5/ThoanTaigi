@@ -1,8 +1,1 @@
-/* Localized versions of Info.plist keys */
 
-NSHumanReadableCopyright = "Copyleft 2017, 式恕堂";
-
-im.rime.inputmethod.Squirrel = "鼠鬚管";
-
-CFBundleName = "鼠鬚管";
-CFBundleDisplayName = "鼠鬚管";

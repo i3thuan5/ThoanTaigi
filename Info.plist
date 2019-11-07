@@ -3,38 +3,37 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
-	<string>Squirrel</string>
+	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIconFile</key>
-	<string>RimeIcon.icns</string>
+	<string>ithoan_icon_128.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Squirrel</string>
+	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>0.14.0</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>ComponentInputModeDict</key>
 	<dict>
 		<key>tsInputModeListKey</key>
 		<dict>
-			<key>im.rime.inputmethod.Squirrel</key>
+			<key>tw.ithoan.inputmethod.ThoanTaigi</key>
 			<dict>
 				<key>TISInputSourceID</key>
-				<string>im.rime.inputmethod.Squirrel.Rime</string>
+				<string>tw.ithoan.inputmethod.ThoanTaigi.HanloPoj</string>
 				<key>TISIntendedLanguage</key>
-				<string>zh</string>
+				<string>zh-Hant</string>
 				<key>tsInputModeAlternateMenuIconFileKey</key>
-				<string>rime.pdf</string>
+				<string>ithoan_icon_16.icns</string>
 				<key>tsInputModeCharacterRepertoireKey</key>
 				<array>
-					<string>zh-Hans</string>
 					<string>zh-Hant</string>
 				</array>
 				<key>tsInputModeDefaultStateKey</key>
@@ -44,9 +43,9 @@
 				<key>tsInputModeKeyEquivalentModifiersKey</key>
 				<integer>4608</integer>
 				<key>tsInputModeMenuIconFileKey</key>
-				<string>rime.pdf</string>
+				<string>ithoan_icon_16.icns</string>
 				<key>tsInputModePaletteIconFileKey</key>
-				<string>rime.pdf</string>
+				<string>ithoan_icon_16.icns</string>
 				<key>tsInputModePrimaryInScriptKey</key>
 				<true/>
 				<key>tsInputModeScriptKey</key>
@@ -55,15 +54,17 @@
 		</dict>
 		<key>tsVisibleInputModeOrderedArrayKey</key>
 		<array>
-			<string>im.rime.inputmethod.Squirrel.Rime</string>
+			<string>tw.ithoan.inputmethod.ThoanTaigi.HanloPoj</string>
 		</array>
 	</dict>
 	<key>InputMethodConnectionName</key>
-	<string>Squirrel_1_Connection</string>
+	<string>ThoanTaigi_1_Connection</string>
 	<key>InputMethodServerControllerClass</key>
 	<string>SquirrelInputController</string>
 	<key>InputMethodServerDelegateClass</key>
 	<string>SquirrelInputController</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
 	<key>LSBackgroundOnly</key>
 	<false/>
 	<key>LSUIElement</key>
@@ -82,10 +83,9 @@
 	<string>dsa_pub.pem</string>
 	<key>tsInputMethodCharacterRepertoireKey</key>
 	<array>
-		<string>zh-Hans</string>
 		<string>zh-Hant</string>
 	</array>
 	<key>tsInputMethodIconFileKey</key>
-	<string>rime.pdf</string>
+	<string>ithoan_icon_16.icns</string>
 </dict>
 </plist>
