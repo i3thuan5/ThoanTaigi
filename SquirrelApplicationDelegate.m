@@ -150,7 +150,7 @@ void notification_handler(void* context_object, RimeSessionId session_id,
   // Get Date of today
   NSDate * tsitma = [NSDate date];
   // Get outdate from string
-  NSDate * hanki = [formatter dateFromString:@"2020-05-11 15:00"];
+  NSDate * hanki = [formatter dateFromString:@"2020-05-11 16:45"];
   [formatter release];
 
   NSComparisonResult result = [tsitma compare:hanki];
