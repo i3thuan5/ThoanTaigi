@@ -141,7 +141,7 @@ void notification_handler(void* context_object, RimeSessionId session_id,
   // setup date format
   NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 
-  // AM -> 上午
+  [formatter setCalendar: [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar]];
   [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_Hans_TW"]];
   [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"Asia/Taipei"]];
   [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
