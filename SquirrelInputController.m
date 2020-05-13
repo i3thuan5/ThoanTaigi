@@ -255,7 +255,12 @@
 
 -(void)activateServer:(id)sender
 {
-  //NSLog(@"activateServer:");
+  NSLog(@"activateServer:");
+  BOOL kam_kauki = [self KiamtsaKauki];
+  if(kam_kauki) {
+    NSLog(@"Kau-ki--ah in activateServer");
+    return;
+  }
   if ([NSApp.squirrelAppDelegate.config getBool:@"us_keyboard_layout"]) {
     [sender overrideKeyboardWithKeyboardNamed:@"com.apple.keylayout.US"];
   }
