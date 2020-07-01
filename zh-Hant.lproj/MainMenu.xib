@@ -40,6 +40,12 @@
                         <action selector="configure:" target="252" id="800"/>
                     </connections>
                 </menuItem>
+                <menuItem title="線頂說明文件" tag="2" hidden="YES" id="797">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openWiki:" target="252" id="798"/>
+                    </connections>
+                </menuItem>
             </items>
             <point key="canvasLocation" x="140" y="152"/>
         </menu>
