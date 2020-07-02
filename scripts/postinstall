@@ -1,3 +1,5 @@
+
+
 #!/bin/bash
 
 login_user=`/usr/bin/stat -f%Su /dev/console`
@@ -13,5 +15,8 @@ if [ -z "${RIME_NO_PREBUILD}" ]; then
     "${squirrel_executable}" --build
     popd > /dev/null
 fi
+
+font_dir="$HOME/Library/Fonts"
+cp "fonts/jf-openhuninn-1.1.ttf" "$font_dir/"
 
 /usr/bin/sudo -u "${login_user}" "${squirrel_executable}" --install
