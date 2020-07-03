@@ -1,5 +1,3 @@
-
-
 #!/bin/bash
 
 login_user=`/usr/bin/stat -f%Su /dev/console`
@@ -18,5 +16,6 @@ fi
 
 font_dir="$HOME/Library/Fonts"
 cp "${rime_shared_data_path}/jf-openhuninn-1.1.ttf" "$font_dir/"
+
 
 /usr/bin/sudo -u "${login_user}" "${squirrel_executable}" --install
