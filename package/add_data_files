@@ -74,6 +74,7 @@ add_file() {
     add_line "${anchor_line}" "${new_line}"
 }
 
+cp "fonts/jf-openhuninn-1.1.ttf" "data/plum/"
 data_files=(
     $(ls data/plum/* | xargs basename)
 )

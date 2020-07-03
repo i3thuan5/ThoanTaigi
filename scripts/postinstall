@@ -17,6 +17,6 @@ if [ -z "${RIME_NO_PREBUILD}" ]; then
 fi
 
 font_dir="$HOME/Library/Fonts"
-cp "fonts/jf-openhuninn-1.1.ttf" "$font_dir/"
+cp "${rime_shared_data_path}/jf-openhuninn-1.1.ttf" "$font_dir/"
 
 /usr/bin/sudo -u "${login_user}" "${squirrel_executable}" --install
