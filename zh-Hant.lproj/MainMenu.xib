@@ -46,7 +46,7 @@
                         <action selector="openWiki:" target="252" id="798"/>
                     </connections>
                 </menuItem>
-                <menuItem title="PANPUN:" enabled="NO" id="zQe-63-a4o">
+                <menuItem title="版本：PAN-PUN-HO" enabled="NO" id="zQe-63-a4o">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
             </items>
