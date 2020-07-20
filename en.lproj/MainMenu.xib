@@ -46,7 +46,7 @@
                         <action selector="openWiki:" target="252" id="798"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Version: PAN-PUN-HO" tag="1" enabled="NO" id="776">
+                <menuItem title="Version PAN-PUN-HO" tag="1" enabled="NO" id="776">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="checkForUpdates:" target="772" id="796"/>
