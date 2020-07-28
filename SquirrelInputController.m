@@ -256,9 +256,8 @@
 -(void)activateServer:(id)sender
 {
   //NSLog(@"activateServer:");
-  if ([NSApp.squirrelAppDelegate.config getBool:@"us_keyboard_layout"]) {
-    [sender overrideKeyboardWithKeyboardNamed:@"com.apple.keylayout.US"];
-  }
+  //It-tēng ài siat chò Eng-gí layout
+  [sender overrideKeyboardWithKeyboardNamed:@"com.apple.keylayout.US"];
   _preeditString = @"";
 }
 
