@@ -10,8 +10,8 @@ curl -LO "https://github.com/rime/librime/releases/download/${rime_version}/${do
 # this allows newer rime_api.h headers to be used with stable rime binaries in the ci build.
 unzip -n "${download_archive}" -d librime
 
-# skip building librime and opencc-data
-make copy-rime-binaries copy-opencc-data
+# skip building librime
+make copy-rime-binaries
 
 # install Rime recipes as listed in the ci project variable
 rime_dir=plum/output bash plum/rime-install ${SQUIRREL_BUNDLED_RECIPES}

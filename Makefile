@@ -88,7 +88,6 @@ clean:
 	rm bin/* > /dev/null 2>&1 || true
 	rm lib/* > /dev/null 2>&1 || true
 	rm data/plum/* > /dev/null 2>&1 || true
-	rm data/opencc/*.ocd > /dev/null 2>&1 || true
 
 clean-deps:
 	$(MAKE) -C plum clean
