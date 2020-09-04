@@ -32,16 +32,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4407F3CA14EC079A001329FE /* Copy opencc Files */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = opencc;
-			dstSubfolderSpec = 12;
-			files = (
-			);
-			name = "Copy opencc Files";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		44DA7A1614DD581B00C1ED3B /* Copy Shared Support Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -265,7 +255,6 @@
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				A464E3780F65263000148227 /* Copy 3rd-party Frameworks */,
 				44DA7A1614DD581B00C1ED3B /* Copy Shared Support Files */,
-				4407F3CA14EC079A001329FE /* Copy opencc Files */,
 				44E21A8D16A653AC00C2B08F /* CopyFiles */,
 			);
 			buildRules = (
