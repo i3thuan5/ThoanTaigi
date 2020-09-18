@@ -159,19 +159,6 @@
 
   // TODO add special key event postprocessing here
 
-  if (!handled) {
-    BOOL isVimBackInCommandMode = rime_keycode == XK_Escape ||
-    ((rime_modifiers & kControlMask) && (rime_keycode == XK_c ||
-                                         rime_keycode == XK_C ||
-                                         rime_keycode == XK_bracketleft));
-    if (isVimBackInCommandMode &&
-        rime_get_api()->get_option(_session, "vim_mode") &&
-        !rime_get_api()->get_option(_session, "ascii_mode")) {
-      rime_get_api()->set_option(_session, "ascii_mode", True);
-      // NSLog(@"turned Chinese mode off in vim-like editor's command mode");
-    }
-  }
-
   // Simulate key-ups for every interesting key-down for chord-typing.
   if (handled) {
     bool is_chording_key = rime_modifiers == 0 &&
