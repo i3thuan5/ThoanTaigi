@@ -353,6 +353,59 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
   NSRect highlightedRect = NSZeroRect;
   CGFloat separatorWidth = 0;
 
+
+
+  // candidates: Thau sǹg tn̂g-té
+  NSUInteger i;
+  NSUInteger siongKhuah = 0;
+  for (i = 0; i < candidates.count; ++i) {
+
+    //Khok ē-té ê khang-khuè.
+
+    NSMutableAttributedString *line = [[NSMutableAttributedString alloc] init];
+
+    char label_character = (i < labels.length) ? [labels characterAtIndex:i]
+                                               : ((i + 1) % 10 + '0');
+
+    NSDictionary *attrs = (i == index) ? _highlightedAttrs : _attrs;
+    NSDictionary *labelAttrs =
+        (i == index) ? _labelHighlightedAttrs : _labelAttrs;
+    NSDictionary *commentAttrs =
+        (i == index) ? _commentHighlightedAttrs : _commentAttrs;
+
+    if (labelRange.location != NSNotFound) {
+      [line appendAttributedString:
+                [[NSAttributedString alloc]
+                    initWithString:[NSString stringWithFormat:labelFormat,
+                                                              label_character]
+                        attributes:labelAttrs]];
+    }
+
+    NSString *candidate = [NSString stringWithFormat:@"\u200E%@\u200E", candidates[i]];
+
+    [line appendAttributedString:[[NSAttributedString alloc]
+                                     initWithString:candidate
+                                         attributes:attrs]];
+
+    if (labelRange2.location != NSNotFound) {
+      [line appendAttributedString:
+                [[NSAttributedString alloc]
+                    initWithString:[NSString stringWithFormat:labelFormat2,
+                                                              label_character]
+                        attributes:labelAttrs]];
+    }
+
+    if (i < comments.count && [comments[i] length] != 0) {
+      if (siongKhuah < line.size.width) {
+        siongKhuah = line.size.width
+      }
+    }
+  }
+
+
+
+
+
   // candidates
   NSUInteger i;
   for (i = 0; i < candidates.count; ++i) {
@@ -393,9 +446,13 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
     }
 
     if (i < comments.count && [comments[i] length] != 0) {
-      [line appendAttributedString:[[NSAttributedString alloc]
-                                       initWithString:@"\t"
-                                           attributes:_attrs]];
+      int keh = (siongKhuah - line.size.width);
+      [line appendAttributedString:
+                [[NSAttributedString alloc]
+                    initWithString:[@"" stringByPaddingToLength:keh
+                                                     withString: @" "
+                                                startingAtIndex:0]
+                        attributes:_attrs]];
       [line appendAttributedString:[[NSAttributedString alloc]
                                        initWithString:comments[i]
                                            attributes:commentAttrs]];
