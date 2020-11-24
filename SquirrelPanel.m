@@ -394,7 +394,7 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
 
     if (i < comments.count && [comments[i] length] != 0) {
       [line appendAttributedString:[[NSAttributedString alloc]
-                                       initWithString:@" "
+                                       initWithString:@" \t"
                                            attributes:_attrs]];
       [line appendAttributedString:[[NSAttributedString alloc]
                                        initWithString:comments[i]
