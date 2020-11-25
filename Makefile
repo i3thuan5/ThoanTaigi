@@ -44,7 +44,11 @@ deps: librime
 
 release: $(DEPS_CHECK)
 	bash package/add_data_files
-	xcodebuild -project ThoanTaigi.xcodeproj -configuration Release build | grep -v setenv | tee build.log
+	bash -c '\
+      set -e; \
+      set -o pipefail; \
+      xcodebuild -project ThoanTaigi.xcodeproj -configuration Release build | grep -v setenv | tee build.log '
+
 
 debug: $(DEPS_CHECK)
 	bash package/add_data_files
