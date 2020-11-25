@@ -370,8 +370,6 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
     NSDictionary *attrs = (i == index) ? _highlightedAttrs : _attrs;
     NSDictionary *labelAttrs =
         (i == index) ? _labelHighlightedAttrs : _labelAttrs;
-    NSDictionary *commentAttrs =
-        (i == index) ? _commentHighlightedAttrs : _commentAttrs;
 
     if (labelRange.location != NSNotFound) {
       [line appendAttributedString:
