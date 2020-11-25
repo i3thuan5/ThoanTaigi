@@ -397,7 +397,7 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
 
     if (i < comments.count && [comments[i] length] != 0) {
       if (siongKhuah < line.size.width) {
-        siongKhuah = line.size.width
+        siongKhuah = line.size.width;
       }
     }
   }
@@ -407,7 +407,7 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
 
 
   // candidates
-  NSUInteger i;
+  // NSUInteger i;
   for (i = 0; i < candidates.count; ++i) {
     NSMutableAttributedString *line = [[NSMutableAttributedString alloc] init];
 
