@@ -402,9 +402,9 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
 
 
 
-  NSAttributedString space = [[NSAttributedString alloc]
-                                initWithString:@" "
-                                    attributes:attrs];
+  NSAttributedString *space = [[NSAttributedString alloc]
+                                  initWithString:@" "
+                                      attributes:_attrs];
   NSUInteger spaceWidth = space.size.width;
 
 
