@@ -394,12 +394,13 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
     }
 
     if (i < comments.count && [comments[i] length] != 0) {
-      if (siongKhuah < line.size.width) {
-        siongKhuah = line.size.width;
+      if (siongKhuah < candidate.length) {
+        siongKhuah = candidate.length;
       }
     }
   }
 
+  siongKhuah = siongKhuah + 1;
 
 
 
@@ -444,7 +445,7 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
     }
 
     if (i < comments.count && [comments[i] length] != 0) {
-      int keh = (siongKhuah - line.size.width);
+      int keh = (siongKhuah - candidate.length);
       [line appendAttributedString:
                 [[NSAttributedString alloc]
                     initWithString:[@"" stringByPaddingToLength:keh
