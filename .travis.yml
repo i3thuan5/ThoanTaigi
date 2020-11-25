@@ -12,9 +12,9 @@ script:
 - mv rime_taigi_poj_hanlo/taigi_pojhanlo_sujiphoat data/plum
 - bash -x package/add_data_files
 - nl -b a ThoanTaigi.xcodeproj/project.pbxproj
-- make || travis_terminate 1
+- make
 after_success:
-- make package || travis_terminate 1
+- make package
 #- make archive  # app store
 before_deploy:
 - mkdir pkg
