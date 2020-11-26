@@ -448,18 +448,18 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
     }
 
     if (i < comments.count && [comments[i] length] != 0) {
-      NSUInteger keh = (siongKhuah - line.size.width) / spaceWidth + 1;
-      [line appendAttributedString:
-                [[NSAttributedString alloc]
-                    initWithString:[@"" stringByPaddingToLength:keh
-                                                     withString: @" "
-                                                startingAtIndex:0]
-                        attributes:_attrs]];
-      // while (line.size.width < siongKhuah) {
-      //   [line appendAttributedString:[[NSAttributedString alloc]
-      //                                 initWithString:@" "
-      //                                     attributes:_attrs]];
-      // }
+      // NSUInteger keh = (siongKhuah - line.size.width) / spaceWidth + 1;
+      // [line appendAttributedString:
+      //           [[NSAttributedString alloc]
+      //               initWithString:[@"" stringByPaddingToLength:keh
+      //                                                withString: @" "
+      //                                           startingAtIndex:0]
+      //                   attributes:_attrs]];
+      while (line.size.width <= siongKhuah) {
+        [line appendAttributedString:[[NSAttributedString alloc]
+                                      initWithString:@"\t"
+                                          attributes:_attrs]];
+      }
 
       [line appendAttributedString:[[NSAttributedString alloc]
                                        initWithString:comments[i]
