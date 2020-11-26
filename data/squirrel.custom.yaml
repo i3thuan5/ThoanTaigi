@@ -1,0 +1,29 @@
+# Squirrel for macOS
+# 輸入介面設定
+# 位置：~/Library/Rime/squirrel.custom.yaml
+# 參考：https://github.com/rime/artworks/tree/master/squirrel-color-schemes
+
+patch:
+  style/color_scheme: aqua
+#  style/horizontal: true   # 候選排橫--ê
+  style/inline_preedit: true
+  style/corner_radius: 4
+  style/border_height: 8
+  style/border_width: 12
+  style/line_spacing: 4
+  style/spacing: 4
+  style/candidate_format: '%c. %@'
+  style/font_face: 'jf-openhuninn-1.1'
+  style/font_point: 20
+  style/label_font_face: 'Andale Mono'
+  style/label_font_point: 14
+  preset_color_schemes/aqua/text_color: 0x2238dc
+  preset_color_schemes/aqua/back_color: 0xffffff
+  preset_color_schemes/aqua/border_color: 0xcccccc
+  preset_color_schemes/aqua/hilited_text_color: 0x2238dc
+  preset_color_schemes/aqua/hilited_back_color: 0xffffff
+  preset_color_schemes/aqua/candidate_text_color: 0x575757
+  preset_color_schemes/aqua/hilited_candidate_text_color: 0x2238dc
+  preset_color_schemes/aqua/hilited_candidate_back_color: 0xffffff
+  preset_color_schemes/aqua/hilited_comment_text_color: 0x7c8ae8
+  preset_color_schemes/aqua/comment_text_color: 0x989898
