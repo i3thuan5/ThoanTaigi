@@ -357,11 +357,10 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
 
   // candidates: Thau sǹg tn̂g-té
   NSUInteger i;
-  NSUInteger siongKhuah = 0;
+  NSSize siongKhuah = NSZeroSize;
   for (i = 0; i < candidates.count; ++i) {
 
     //Khok ē-té ê khang-khuè.
-
     NSMutableAttributedString *line = [[NSMutableAttributedString alloc] init];
 
     char label_character = (i < labels.length) ? [labels characterAtIndex:i]
@@ -394,18 +393,18 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
     }
 
     if (i < comments.count && [comments[i] length] != 0) {
-      if (siongKhuah <= line.size.width) {
-        siongKhuah = line.size.width;
+      if (siongKhuah.width < line.size.width) {
+        siongKhuah.width = line.size.width;
       }
     }
   }
 
 
 
-  NSAttributedString *space = [[NSAttributedString alloc]
-                                  initWithString:@" "
-                                      attributes:_attrs];
-  NSUInteger spaceWidth = space.size.width;
+  // NSAttributedString *space = [[NSAttributedString alloc]
+  //                                 initWithString:@" "
+  //                                     attributes:_attrs];
+  // NSUInteger spaceWidth = space.size.width;
 
 
   // candidates
@@ -455,7 +454,7 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
       //                                                withString: @" "
       //                                           startingAtIndex:0]
       //                   attributes:_attrs]];
-      while (line.size.width <= siongKhuah) {
+      while (line.size.width <= siongKhuah.width) {
         [line appendAttributedString:[[NSAttributedString alloc]
                                       initWithString:@"\t"
                                           attributes:_attrs]];
