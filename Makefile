@@ -46,7 +46,6 @@ release: $(DEPS_CHECK)
 	bash package/add_data_files
 	xcodebuild -project ThoanTaigi.xcodeproj -configuration Release build
 
-
 debug: $(DEPS_CHECK)
 	bash package/add_data_files
 	xcodebuild -project ThoanTaigi.xcodeproj -configuration Debug build | grep -v setenv | tee build.log

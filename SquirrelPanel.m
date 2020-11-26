@@ -353,13 +353,11 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
   NSRect highlightedRect = NSZeroRect;
   CGFloat separatorWidth = 0;
 
-
-
   // candidates
   NSUInteger i;
 
-  // For vertical mode, before appending candidates, copy the front workflow 
-  // of candidates to get the max width of candidates, so that the spacing 
+  // For vertical mode, before appending candidates, copy the front workflow
+  // of candidates to get the max width of candidates, so that the spacing
   // between candidate and comment can be calculated later.
   NSSize maxLineSize = NSZeroSize;
   if (!_horizontal) {
