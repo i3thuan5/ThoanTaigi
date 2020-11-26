@@ -355,6 +355,55 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
 
   // candidates
   NSUInteger i;
+
+  // For vertical mode, before appending candidates, copy the front workflow
+  // of candidates to get the max width of candidates, so that the spacing
+  // between candidate and comment can be calculated later.
+  NSSize maxLineSize = NSZeroSize;
+  if (!_horizontal) {
+
+    for (i = 0; i < candidates.count; ++i) {
+      NSMutableAttributedString *line = [[NSMutableAttributedString alloc] init];
+
+      char label_character = (i < labels.length) ? [labels characterAtIndex:i]
+                                                 : ((i + 1) % 10 + '0');
+
+      NSDictionary *attrs = (i == index) ? _highlightedAttrs : _attrs;
+      NSDictionary *labelAttrs =
+          (i == index) ? _labelHighlightedAttrs : _labelAttrs;
+
+      if (labelRange.location != NSNotFound) {
+        [line appendAttributedString:
+                  [[NSAttributedString alloc]
+                      initWithString:[NSString stringWithFormat:labelFormat,
+                                                                label_character]
+                          attributes:labelAttrs]];
+      }
+
+      NSString *candidate = [NSString stringWithFormat:@"\u200E%@\u200E", candidates[i]];
+
+      [line appendAttributedString:[[NSAttributedString alloc]
+                                       initWithString:candidate
+                                           attributes:attrs]];
+
+      if (labelRange2.location != NSNotFound) {
+        [line appendAttributedString:
+                  [[NSAttributedString alloc]
+                      initWithString:[NSString stringWithFormat:labelFormat2,
+                                                                label_character]
+                          attributes:labelAttrs]];
+      }
+
+      if (i < comments.count && [comments[i] length] != 0) {
+        if (maxLineSize.width < line.size.width) {
+          maxLineSize.width = line.size.width;
+        }
+      }
+    }
+  }
+
+
+  // candidates
   for (i = 0; i < candidates.count; ++i) {
     NSMutableAttributedString *line = [[NSMutableAttributedString alloc] init];
 
@@ -393,9 +442,18 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
     }
 
     if (i < comments.count && [comments[i] length] != 0) {
-      [line appendAttributedString:[[NSAttributedString alloc]
-                                       initWithString:@" "
-                                           attributes:_attrs]];
+      if (_horizontal) {
+        [line appendAttributedString:[[NSAttributedString alloc]
+                                        initWithString:@" "
+                                            attributes:_attrs]];
+      } else {
+        while (line.size.width <= maxLineSize.width) {
+          [line appendAttributedString:[[NSAttributedString alloc]
+                                        initWithString:@"\t"
+                                            attributes:_attrs]];
+        }
+      }
+
       [line appendAttributedString:[[NSAttributedString alloc]
                                        initWithString:comments[i]
                                            attributes:commentAttrs]];
