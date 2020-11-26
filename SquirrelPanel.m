@@ -355,60 +355,57 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
 
 
 
-  // candidates: Thau sǹg tn̂g-té
+  // candidates
   NSUInteger i;
-  NSSize siongKhuah = NSZeroSize;
-  for (i = 0; i < candidates.count; ++i) {
 
-    //Khok ē-té ê khang-khuè.
-    NSMutableAttributedString *line = [[NSMutableAttributedString alloc] init];
+  // For vertical mode, before appending candidates, copy the front workflow 
+  // of candidates to get the max width of candidates, so that the spacing 
+  // between candidate and comment can be calculated later.
+  NSSize maxLineSize = NSZeroSize;
+  if (!_horizontal) {
 
-    char label_character = (i < labels.length) ? [labels characterAtIndex:i]
-                                               : ((i + 1) % 10 + '0');
+    for (i = 0; i < candidates.count; ++i) {
+      NSMutableAttributedString *line = [[NSMutableAttributedString alloc] init];
 
-    NSDictionary *attrs = (i == index) ? _highlightedAttrs : _attrs;
-    NSDictionary *labelAttrs =
-        (i == index) ? _labelHighlightedAttrs : _labelAttrs;
+      char label_character = (i < labels.length) ? [labels characterAtIndex:i]
+                                                 : ((i + 1) % 10 + '0');
 
-    if (labelRange.location != NSNotFound) {
-      [line appendAttributedString:
-                [[NSAttributedString alloc]
-                    initWithString:[NSString stringWithFormat:labelFormat,
-                                                              label_character]
-                        attributes:labelAttrs]];
-    }
+      NSDictionary *attrs = (i == index) ? _highlightedAttrs : _attrs;
+      NSDictionary *labelAttrs =
+          (i == index) ? _labelHighlightedAttrs : _labelAttrs;
 
-    NSString *candidate = [NSString stringWithFormat:@"\u200E%@\u200E", candidates[i]];
+      if (labelRange.location != NSNotFound) {
+        [line appendAttributedString:
+                  [[NSAttributedString alloc]
+                      initWithString:[NSString stringWithFormat:labelFormat,
+                                                                label_character]
+                          attributes:labelAttrs]];
+      }
 
-    [line appendAttributedString:[[NSAttributedString alloc]
-                                     initWithString:candidate
-                                         attributes:attrs]];
+      NSString *candidate = [NSString stringWithFormat:@"\u200E%@\u200E", candidates[i]];
 
-    if (labelRange2.location != NSNotFound) {
-      [line appendAttributedString:
-                [[NSAttributedString alloc]
-                    initWithString:[NSString stringWithFormat:labelFormat2,
-                                                              label_character]
-                        attributes:labelAttrs]];
-    }
+      [line appendAttributedString:[[NSAttributedString alloc]
+                                       initWithString:candidate
+                                           attributes:attrs]];
 
-    if (i < comments.count && [comments[i] length] != 0) {
-      if (siongKhuah.width < line.size.width) {
-        siongKhuah.width = line.size.width;
+      if (labelRange2.location != NSNotFound) {
+        [line appendAttributedString:
+                  [[NSAttributedString alloc]
+                      initWithString:[NSString stringWithFormat:labelFormat2,
+                                                                label_character]
+                          attributes:labelAttrs]];
+      }
+
+      if (i < comments.count && [comments[i] length] != 0) {
+        if (maxLineSize.width < line.size.width) {
+          maxLineSize.width = line.size.width;
+        }
       }
     }
   }
 
 
-
-  // NSAttributedString *space = [[NSAttributedString alloc]
-  //                                 initWithString:@" "
-  //                                     attributes:_attrs];
-  // NSUInteger spaceWidth = space.size.width;
-
-
   // candidates
-  // NSUInteger i;
   for (i = 0; i < candidates.count; ++i) {
     NSMutableAttributedString *line = [[NSMutableAttributedString alloc] init];
 
@@ -447,17 +444,16 @@ static NSString *const kDefaultCandidateFormat = @"%c. %@";
     }
 
     if (i < comments.count && [comments[i] length] != 0) {
-      // NSUInteger keh = (siongKhuah - line.size.width) / spaceWidth + 1;
-      // [line appendAttributedString:
-      //           [[NSAttributedString alloc]
-      //               initWithString:[@"" stringByPaddingToLength:keh
-      //                                                withString: @" "
-      //                                           startingAtIndex:0]
-      //                   attributes:_attrs]];
-      while (line.size.width <= siongKhuah.width) {
+      if (_horizontal) {
         [line appendAttributedString:[[NSAttributedString alloc]
-                                      initWithString:@"\t"
-                                          attributes:_attrs]];
+                                        initWithString:@" "
+                                            attributes:_attrs]];
+      } else {
+        while (line.size.width <= maxLineSize.width) {
+          [line appendAttributedString:[[NSAttributedString alloc]
+                                        initWithString:@"\t"
+                                            attributes:_attrs]];
+        }
       }
 
       [line appendAttributedString:[[NSAttributedString alloc]
